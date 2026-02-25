@@ -58,7 +58,6 @@ class SpatialBasisFunctions(nn.Module):
         num_locations = spatial_coords.shape[0]
     
         if learn_basis:
-            # 기존 그대로
             if self.num_basis <= num_locations:
                 indices = torch.linspace(0, num_locations - 1, self.num_basis).long()
                 centers = spatial_coords[indices].clone()
@@ -476,4 +475,5 @@ class BasisInitialEncoder(nn.Module):
             post_cov = torch.linalg.inv(post_precision + 1e-4 * torch.eye(K, device=device, dtype=dtype))
         
         z0_std = torch.diag(post_cov).clamp(min=1e-6).sqrt()
+
         return z0_mean, z0_std
