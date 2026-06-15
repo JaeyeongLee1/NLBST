@@ -1,6 +1,6 @@
 # NLBST: Non-Local Bayesian Spatio-Temporal Model
 
-Code for the paper submitted to UAI 2026:  
+Code for the paper accepted to UAI 2026:  
 **"Nonlocal Bayesian Modeling of Continuous Spatio-Temporal Dynamics"**
 
 ## Requirements
